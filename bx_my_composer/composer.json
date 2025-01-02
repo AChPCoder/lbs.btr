@@ -1,0 +1,39 @@
+{
+    "name": "chav-c/bx_my_composer",
+    "description": "Additional composer files for bx study project",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "chav-c"
+        }
+    ],
+    "config": {
+        "vendor-dir": "./vendor",
+        "optimize-autoloader": true,
+        "sort-packages": true,
+        "platform": {
+            "php": "8.1.25"
+        },
+        "allow-plugins": {
+            "wikimedia/composer-merge-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": "8.1.*",
+        "wikimedia/composer-merge-plugin": "dev-master",
+        "kint-php/kint": "5.1.1"
+    },
+    "extra": {
+        "merge-plugin": {
+            "require": [
+                "..\\site\\bitrix\\composer-bx.json"
+            ]
+        }
+    },
+    "autoload": {
+        "App\\": "app/"
+    }
+}

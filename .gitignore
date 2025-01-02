@@ -1,0 +1,25 @@
+# app editing folders n files excludes
+/.hg/
+/.idea/
+/.dropbox/
+/.mc/
+/.vscode/
+/nbproject/
+__MACOSX/*
+.DS_Store
+#.htaccess
+.htaccess.restore
+.hgignore
+
+# common excludes
+/bx_my_composer/vendor
+/site/bitrix
+/site/upload
+/site/images
+
+# single files at the root (n site root)
+/*.png
+/*.jpg
+/site/*.png
+/site/*.jpg
+/site/log.txt
