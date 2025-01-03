@@ -194,5 +194,34 @@
 		}
 		e.preventDefault()
 	};
+
+	(function (window) {
+		if (!!window.JANewsListSlider) {
+			return;
+		}
+		console.log('Anchor prevent default action on slider btn click');
+
+		/** Исключение кнопок слайдера из обрабатываемых при клике (если, например, слайдер вложен в `a` элемент)
+		 * @param {HTMLAnchorElement} aEl
+		 * @param {string[]} excludeSelectors
+		 */
+		window.JANewsListSlider = function (aEl, excludeSelectors) {
+			aEl.addEventListener('click', function (evt) {
+				const evtTrg = evt.target;
+				const excludedElements = document.querySelectorAll(excludeSelectors.join(', '));
+				let inSliderBtn = false;
+				for (const excludedElement of excludedElements) {
+					inSliderBtn = excludedElement.contains(evtTrg);
+					if (inSliderBtn) {
+						break;
+					}
+				}
+				if (inSliderBtn) {
+					console.log(evtTrg);
+					evt.preventDefault();
+				}
+			});
+		};
+	})(window);
 }
 )(window);
