@@ -24,7 +24,8 @@
     "require": {
         "php": "8.1.*",
         "wikimedia/composer-merge-plugin": "dev-master",
-        "kint-php/kint": "5.1.1"
+        "kint-php/kint": "5.1.1",
+        "ext-dom": "*"
     },
     "extra": {
         "merge-plugin": {

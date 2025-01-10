@@ -209,15 +209,17 @@ $curPage = $APPLICATION->GetCurPage(true);
 							Array('HIDE_ICONS' => 'Y')
 						);?>
 					</div>
-				</div>
+				</div><?php $needHideUsualTitle = \App\Helpers\ViewH::isUsualTitleHideNeeded($curPage) ?>
+                <?php if (!$needHideUsualTitle) { ?>
 				<h1 id="pagetitle"><?$APPLICATION->ShowTitle(false);?></h1>
+                <?php } ?>
 			<?endif?>
 			<!--endregion-->
 		</div>
 	</header>
 
-	<div class="workarea">
-		<div class="container bx-content-section">
+	<div class="workarea"><?php $needWideWorkarea = \App\Helpers\ViewH::isWideWorkareaNeeded($curPage) ?>
+		<div class="bx-content-section<?= $needWideWorkarea ? ' container-fluid wide-workarea' : ' container' ?>">
 			<div class="row">
-			<?$needSidebar = preg_match("~^".SITE_DIR."(catalog|personal\/cart|personal\/order\/make)/~", $curPage);?>
+            <?php $needSidebar = \App\Helpers\ViewH::isSidebarNeeded($curPage);?>
 				<div class="bx-content <?=($needSidebar ? "col" : "col-md-9 col-sm-8")?>">
