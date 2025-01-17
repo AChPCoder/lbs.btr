@@ -15,6 +15,19 @@ $this->setFrameMode(true);
 $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-'.$arParams['TEMPLATE_THEME'] : '';
 ?>
 
+<div class="d-flex flex-column">
+    <div><?= GetMessage('SPECIAL_NEWS_SECTION_BLOCK_TITLE') ?></div>
+    <div class="d-flex mb-3" style="column-gap: 5px;">
+        <?php foreach ($arResult["SECTIONS"] as $SECTION) { ?>
+            <a class="d-block border border-primary text-primary"
+               style="padding: 5px 8px;<?php if ($SECTION['IS_ACTIVE']) { ?>box-shadow: inset 0 0 0 1px var(--primary);<?php }?>"
+               href="<?= $SECTION['FULL_URL']?>">
+                <?= htmlspecialcharsbx($SECTION['NAME']) ?>
+            </a>
+        <?php } ?>
+    </div>
+</div>
+
 <div class="article-list--wrapper">
     <? if ($arParams["DISPLAY_TOP_PAGER"]): ?>
         <?= $arResult["NAV_STRING"] ?><br/>
