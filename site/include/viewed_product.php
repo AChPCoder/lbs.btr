@@ -25,8 +25,8 @@
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PARTIAL_PRODUCT_PROPERTIES" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
-		"SHOW_PRODUCTS_2" => "Y",
-		"OFFER_TREE_PROPS_3" => array(
+		"SHOW_PRODUCTS_8" => "Y",
+		"OFFER_TREE_PROPS_9" => array(
 			0 => "COLOR_REF",
 			1 => "SIZES_SHOES",
 			2 => "SIZES_CLOTHES",

@@ -25,7 +25,7 @@ $APPLICATION->SetTitle("Заказы");
 	"BASKET_IMAGES_SCALING" => "adaptive",
 	"SERVICES_IMAGES_SCALING" => "adaptive",
 	"USER_CONSENT" => "Y",
-	"USER_CONSENT_ID" => "1",
+	"USER_CONSENT_ID" => "2",
 	"USER_CONSENT_IS_CHECKED" => "Y",
 	"USER_CONSENT_IS_LOADED" => "Y"
 	),
