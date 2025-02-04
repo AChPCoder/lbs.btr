@@ -1,0 +1,4 @@
+<?php
+$MESS ['CUSTOM_ALLNEWS_TEMPLATE_NO_ITEMS'] = 'Элементы не найдены';
+$MESS ['CUSTOM_ALLNEWS_TEMPLATE_GROUP_NAME_TEMPLATE'] = 'Группа #ID#';
+$MESS ['CUSTOM_ALLNEWS_TEMPLATE_GO_TO_DETAIL'] = 'Перейти к новости';
