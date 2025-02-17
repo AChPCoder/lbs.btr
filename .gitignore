@@ -23,3 +23,6 @@ __MACOSX/*
 /site/*.png
 /site/*.jpg
 /site/log.txt
+
+# local no git configs
+/bx_my_composer/config/

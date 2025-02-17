@@ -16,16 +16,19 @@
             "php": "8.1.25"
         },
         "allow-plugins": {
-            "wikimedia/composer-merge-plugin": true
+            "wikimedia/composer-merge-plugin": true,
+            "php-http/discovery": true
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php": "8.1.*",
-        "wikimedia/composer-merge-plugin": "dev-master",
+        "ext-dom": "*",
+        "arhitector/yandex": "^2.3",
         "kint-php/kint": "5.1.1",
-        "ext-dom": "*"
+        "php-http/message-factory": "^1.1",
+        "wikimedia/composer-merge-plugin": "dev-master"
     },
     "extra": {
         "merge-plugin": {
